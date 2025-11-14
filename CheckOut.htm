@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+ <html lang="fi" class="position-relative">
+ <head prefix="og: http://ogp.me/ns#">
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="dns-prefetch" href="//ww2.proshop.fi" />
+
+     <title>1. Omat tiedot</title>
+
+     
+    
+<link rel="stylesheet" href="/dist/Proshop/basket.04175caa.css">
+    
+
+
+               <meta property="og:title" content="1. Omat tiedot" />
+     <meta property="og:type" content="website" />
+     <meta property="og:image" content="mstile-310x310.png" />
+     <meta name="format-detection" content="telephone=no">
+
+     <link rel="icon" type="image/x-icon" href="/favicon.ico"> <!-- Fallback -->
+     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+
+         <script>var proshopGtmServerDataLayer = [{}];</script>
+     <script type="module">
+    window.dataLayer = window.dataLayer || [];
+    function getElements() {
+        return document.querySelectorAll('[data-gtm]');
+    }
+    getElements().forEach(el => {
+        window.dataLayer.push(JSON.parse(atob(el.dataset.gtm)));
+    });
+    let btns = document.querySelectorAll('button[data-gtm-item-id]');
+    btns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            let gtmId = this.getAttribute('data-gtm-item-id');
+            getElements().forEach(el => {
+                var gtmJson = JSON.parse(atob(el.dataset.gtm));
+                for (var i = 0; i <= gtmJson.ecommerce.items.length; i++) {
+                    if (gtmJson.ecommerce.items[i].item_id !== gtmId) {
+                        continue;
+                    }
+                    window.dataLayer.push({ event: 'add_to_cart', ecommerce: { items: gtmJson.ecommerce.items[i] } });
+                    return;
+                }
+            });
+        },false);
+    });
+    let basketBuyBtn = document.querySelector('#CommerceBasketApp a.site-btn-green');
+    if (basketBuyBtn) {
+        basketBuyBtn.addEventListener('click', function (e) {
+            let basketLines = document.querySelectorAll('#basketLines li input');
+            basketLines.forEach((element) => {
+                let gtmJson = JSON.parse(this.getAttribute("data-gtm-click"));
+                let theId = element.getAttribute("id");
+                for (let index = 0; gtmJson.ecommerce.items.length; index++) {
+                    if (gtmJson.ecommerce.items[index].item_id !== theId) {
+                        continue;
+                    }
+                    gtmJson.ecommerce.items[index].quantity = element.value;
+                    window.dataLayer.push({ ecommerce: null })
+                    window.dataLayer.push(gtmJson);
+                    break;
+                }
+            });
+        });
+    }
+    let paymentTypeButtons = document.getElementsByName("paymentOption");    
+    paymentTypeButtons.forEach(function (paymentTypeButton) {
+        paymentTypeButton.addEventListener('click', function () {
+            window.dataLayer.push({ ecommerce: null })
+            window.dataLayer.push(JSON.parse(atob(paymentTypeButton.getAttribute('data-gtm-payment'))));
+        });
+    });
+</script>
+     
+<script type="module">
+    // 1. Declare 'apps' as a regular variable
+    const apps = {};
+    apps.queue = [];
+    apps.register = function (rootContainer, app) {
+        if (typeof registerApp != 'undefined')
+            registerApp(rootContainer, app)
+        else {
+            apps.queue.push({ rootContainer, app });
+        }
+    }
+
+    // 2. THE FIX: Explicitly assign it to the window
+    window.apps = apps;
+</script>
+
+
+
+      
+
+    
+ 
+     
+    <link rel="preload" href="/dist/js/shared.c99badb3.js" as="script">
+<script src="/dist/js/shared.c99badb3.js" defer></script>
+<script src="/dist/js/register.f6b64aa0.js" defer></script>
+
+<script src="/dist/js/showmo.2.4db2c254.js" defer></script>
+
+
+
+ </head>
+ 
+<body id="siteContainer" class="siteBodyBasketCheckOut" data-version="1.0.9441.25647">
+    <noscript><iframe src="//ww2.proshop.fi/ns.html?id=GTM-PCQSS3W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="module">
+(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//ww2.proshop.fi/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-PCQSS3W');
+</script>
+
+    <header class="fixed-top w-100 d-flex site-area-checkout">
+        <div class="px-2 ps-container w-100">
+            <div class="ps-container__inner header__template m-0 p-0">
+                <div class="header__logo align-items-center">
+                    <a href="/" id="logohome">    <div class="site-campaignElement" data-campaign-element-id="0c3f523b-0c92-45ba-a1b2-3d2d7607e9af">
+        <img src="/Images/proshop_logo_tagline_fi_outlined_4062588de441.svg">
+    </div>
+</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="site-container-fullwidth site-basket-container"><div class="container site-container ps-container position-relative px-2 pt-2">
+
+<div class="site-content-table" id="site-checkout">
+    <div class="hidden-lg hidden-md w-100" id="miniBasketCollapseCard">
+    <div class="miniBasketCollapseContent p-2 collapse" id="collapseExample">
+        <div class="col-sm-4 hidden-xs hidden-sm">
+    <div class="px-2 site-checkout-checkout">
+        <div id="minicheckoutbasketcontent" class="w-100 p-0">
+            <div class="panel panel-primary m-0 clearfix">
+                <div>
+                    <h3>
+Oma ostoskori                    </h3>
+                </div>
+                <div class="site-basket-checkOut">
+                        <div class="miniBasketLine">
+                            <div class="lineProductName"><span>1</span> x Logitech G240-kangas pelihiiri-alusta</div>
+                            <div class="clearfix d-flex">
+                                <div class="text-right minibasketLinePriceWithVat"><span class="text-right">13,46 €</span></div>
+                            </div>
+                        </div>
+                        <div class="miniBasketLine">
+                            <div class="lineProductName"><span>1</span> x Logitech G PRO X SUPERLIGHT + G240 bundle rebate</div>
+                            <div class="clearfix d-flex">
+                                <div class="text-right minibasketLinePriceWithVat"><span class="text-right">-13,46 €</span></div>
+                            </div>
+                        </div>
+                        <div class="miniBasketLine">
+                            <div class="lineProductName"><span>1</span> x Logitech G740 Cloth Pelihiiri Pad</div>
+                            <div class="clearfix d-flex">
+                                <div class="text-right minibasketLinePriceWithVat"><span class="text-right">29,71 €</span></div>
+                            </div>
+                        </div>
+                        <div class="miniBasketLine">
+                            <div class="lineProductName"><span>1</span> x Logitech G PRO X SUPERLIGHT - Pelihiiri - Optinen - 5 painiketta - Valkoinen</div>
+                            <div class="clearfix d-flex">
+                                <div class="text-right minibasketLinePriceWithVat"><span class="text-right">79,90 €</span></div>
+                            </div>
+                        </div>
+                </div>
+                <div class="miniBasketTotals">
+                    <div class="clearfix d-flex">
+                        <div class="text-left flex-grow-1">Toimitus</div>
+                        <div class="text-right flex-grow-1"><span class="text-right">0,00 €</span></div>
+                    </div>
+                    <div class="clearfix d-flex">
+                        <div class="text-left total fw700 flex-grow-1">Kokonaissumma</div>
+                        <div class="totalPrice text-right fw700 flex-grow-1"><span class="text-right">109,61 €</span></div>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                        <div><a href="/Basket" target="_self" class="btn site-btn-tall site-btn-grey">Muuta tilausta</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <button id="btnCollapseMiniBasket" class="btn pull-right" type="button" data-toggle="collapsed" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <span class="btnShow show">Näytä ostoskori</span>
+        <span class="btnHide">Piilota ostoskori</span>
+    </button>    
+</div>
+
+<script>
+    document.getElementById("btnCollapseMiniBasket").addEventListener("click", function () {
+        console.log("btnCollapseMiniBasket Clicked");
+        let parent = document.getElementById('miniBasketCollapseCard');
+        let children = parent.querySelectorAll('.miniBasketCollapseContent');
+        children.forEach(x => x.classList.toggle('show'));
+
+        let btnContainer = document.getElementById("btnCollapseMiniBasket");
+        let btnChildren = btnContainer.querySelectorAll('span');
+        btnChildren.forEach(i => i.classList.toggle('show'));
+    });
+</script>
+    <div class="clearfix">
+        <div class="col-md-8">
+            
+
+                <div class="pb-2 clearfix checkOutFirstStepContainer">
+                    <div class="col-sm-6 clearfix newCustomer">
+                        <div class="checkOutStepHeader d-flex">
+                            <span class="activeStep checkOutStep d-flex">1</span><h1 class="d-flex align-self-center">Uusi asiakas</h1>
+                        </div>
+                        <div class="px-2 createCustomer">
+                            
+
+
+<section id="invoicingform">
+        
+<style>
+    .slide-fade-enter-active {
+        transition: all 0.2s ease-out;
+    }
+
+    .slide-fade-leave-active {
+        transition: all 0.2s cubic-bezier(1, 0.5, 0.8, 1);
+    }
+
+    .slide-fade-enter-from,
+    .slide-fade-leave-to {
+        transform: translateX(20px);
+        opacity: 0;
+    }
+
+    #RegisterForm {
+        transition: opacity 0.1s ease-in-out;
+    }
+</style>
+
+<section v-cloak id="RegisterForm" data-model-private="eyJhbm9ueW1vdXNVc2VyIjp7fSwiY291bnRyeUNvZGUiOjEyLCJpc0NvbXBhbnkiOmZhbHNlLCJjb250cm9sbGVyTmFtZSI6IkNoZWNrT3V0IiwibWV0aG9kTmFtZSI6IlJlZ2lzdGVyIiwiaW50cmFDb21tdW5pdHlEZWxpdmVyeSI6MCwiZW5hYmxlUGhvbmVMb29rdXAiOmZhbHNlLCJlbmFibGVWYXRMb29rdXAiOnRydWUsImVuYWJsZUVhbkludm9pY2UiOmZhbHNlLCJpc0Fub255bW91cyI6dHJ1ZSwiY291bnRyeUNvZGVTdHJpbmciOiJGSSIsImludHJhQ29tbXVuaXR5RGVsaXZlcnlUeXBlIjowLCJ0b2tlbiI6IjU5MjJhZDY3YTc5MiJ9" data-model-company="eyJhbm9ueW1vdXNVc2VyIjp7fSwiY291bnRyeUNvZGUiOjEyLCJpbnRyYUNvbW11bml0eURlbGl2ZXJ5IjoxLCJpc0NvbXBhbnkiOnRydWUsImNvbnRyb2xsZXJOYW1lIjoiQ2hlY2tPdXQiLCJtZXRob2ROYW1lIjoiUmVnaXN0ZXJDb21wYW55IiwiZW5hYmxlUGhvbmVMb29rdXAiOmZhbHNlLCJlbmFibGVWYXRMb29rdXAiOnRydWUsImVuYWJsZUVhbkludm9pY2UiOmZhbHNlLCJpc0Fub255bW91cyI6dHJ1ZSwiY291bnRyeUNvZGVTdHJpbmciOiJGSSIsImludHJhQ29tbXVuaXR5RGVsaXZlcnlUeXBlIjoxLCJ0b2tlbiI6IjU5MjJhZDY3YTc5MiJ9">
+    
+    <div class="mt-2 py-1 w-100 input__wrapper d-flex">
+        <label class="pr-2 d-flex align-items-center" @click="setPrivateCustomerType(true)">
+            <input type="radio" id="custTypePrivate" checked />
+            Yksityinen
+        </label>
+        <label class="pr-2 d-flex align-items-center" @click="setPrivateCustomerType(false)">
+            <input type="radio" id="custTypeBusiness" />
+            Yritys
+        </label>
+    </div>
+    <div class="mb-2 pb-2 d-flex-column">
+                    <div v-if="!isPrivateCustomerType">
+                <div class="pt-2 position-relative">
+                    <h4 class="f-gray">Kirjoita ALV-tunniste alla olevaan kenttän ja klikkaa "Hae osoite". Jos tietoja ei löydy,  valitse lopussa ALV-lasku (ALV 25,5%). </h4>
+                </div>
+                <input type="hidden" ref="data" value="5922ad67a792" />
+                <input :value="lookUp" @input="lookUp = $event.target.value" class="form-control input__new" id="phoneNumberCheck" name="phoneNumberCheck" placeholder="ALV-tunniste (VAT-numero, esim. FI12345678):" type="text" value="" />
+
+                <div class="d-inline-block w-100 mt-2">
+                    <div class="d-inline-block pb-1">
+                        <div class="f-white error__message" v-show="hasError">ALV-numerosi osoitetta ei löytynyt</div>
+                        <div class="f-white success success__message" v-show="hasSuccess">Osoitteesi löytyi.</div>
+                    </div>
+                    <div class="pull-right d-inline-block">
+                        <div class="pull-left pr-2" v-show="showSpinner"><img id="spinner" src="/Content/images/spinner.gif" /></div>
+                        <input type="button" class="btn site-btn-between site-btn-green pull-right"
+                                value="Hae osoite"
+                                @click="getAddressFromData(lookUp)" />
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div v-show="isPrivateCustomerType">
+        
+<form action="/Basket/CheckOut/Register" class="form-horizontal input__new" id="privateForm" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="La4y51PG_WN1ZkN1uV5wUImTTN6YAsI-I-dgheLYu9T9-5BEmHpAFGAImj09jLbGCkVpZ5Q1d87ANPiX43e26uglA-D6DxdxJE36rHryR3g1" /><input id="ControllerName" name="ControllerName" type="hidden" value="CheckOut" /><input id="MethodName" name="MethodName" type="hidden" value="Register" />    <div>
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Nimi</label>
+            <input :value="private.name" @input="private.name = $event.target.value" autocomplete="name" class="form-control" data-val="true" data-val-containsfirstandlastname="Sinun täytyy antaa sekä etu- että sukunimi tai täyttää y-tunnus. " data-val-containsfirstandlastname-otherproperty="VatNumber" data-val-length="Nimi pitää olla vähintään 2 ja maks. 35 merkkiä pitkä." data-val-length-max="35" data-val-length-min="2" data-val-required="Nimi pitää täyttää" id="Name" name="Name" placeholder="Nimi" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Name class="field-validation-valid help-block" data-valmsg-for="Name" data-valmsg-replace="true" v-pre=""></Name>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Katuosoite</label>
+            <input :value="private.address1" @input="private.address1 = $event.target.value" autocomplete="street-address" class="form-control" data-val="true" data-val-length="Katuosoite pitää olla vähintään 2 ja maks. 35 merkkiä pitkä." data-val-length-max="35" data-val-length-min="2" data-val-required="Katuosoite pitää täyttää" id="Address1" name="Address1" placeholder="Katuosoite" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Address1 class="field-validation-valid help-block" data-valmsg-for="Address1" data-valmsg-replace="true" v-pre=""></Address1>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Osoiterivi 2</label>
+            <input :value="private.address2" @input="private.address2 = $event.target.value" class="form-control" data-val="true" data-val-length="Osoiterivi 2 pitää olla vähintään 0 ja maks. 35 merkkiä pitkä." data-val-length-max="35" id="Address2" name="Address2" placeholder="Osoiterivi 2" type="" value="" />
+
+                <span class="pi-xs form-control-feedback"></span>
+            <Address2 class="field-validation-valid help-block" data-valmsg-for="Address2" data-valmsg-replace="true" v-pre=""></Address2>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Postinro</label>
+            <input :value="private.zipCode" @input="private.zipCode = $event.target.value" autocomplete="postal-code" class="form-control" data-val="true" data-val-length="Postinro pitää olla vähintään 3 ja maks. 7 merkkiä pitkä." data-val-length-max="7" data-val-length-min="3" data-val-required="Postinro pitää täyttää" data-val-zipcodevalidation="Postinumeroa ei löydy." data-val-zipcodevalidation-countrycodeproperty="CountryCode" data-val-zipcodevalidation-otherproperty="City" id="ZipCode" name="ZipCode" placeholder="Postinumero" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <ZipCode class="field-validation-valid help-block" data-valmsg-for="ZipCode" data-valmsg-replace="true" v-pre=""></ZipCode>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Paikkakunta</label>
+            <input autocomplete="address-level2" class="form-control" data-val="true" data-val-length="Paikkakunta pitää olla vähintään 2 ja maks. 100 merkkiä pitkä." data-val-length-max="100" data-val-length-min="2" data-val-required="Paikkakunta pitää täyttää" id="City" name="City" placeholder="Paikkakunta" ref="city" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <City class="field-validation-valid help-block" data-valmsg-for="City" data-valmsg-replace="true" v-pre=""></City>
+        </div>
+    </div>
+
+
+        
+<div class="form-group has-feedback position-relative">
+    <div class="col-md-12">
+        <label class="input__label" for="form-control">Maa</label>
+
+        <select :value="private.countryCode" @input="private.countryCode = $event.target.value" class="form-control" data-val="true" data-val-required="Maa pitää täyttää" id="CountryCode" name="CountryCode"><option selected="selected" value="FI">Suomi</option>
+</select>
+
+<CountryCode class="field-validation-valid help-block" data-valmsg-for="CountryCode" data-valmsg-replace="true" v-pre=""></CountryCode>    </div>
+</div>
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Puhelin</label>
+            <input :value="private.phone" @input="private.phone = $event.target.value" autocomplete="tel" class="form-control" data-val="true" data-val-length="Puhelin pitää olla vähintään 8 ja maks. 16 merkkiä pitkä." data-val-length-max="16" data-val-length-min="8" data-val-oneoftwo="Sinun täytyy täyttää Puhelin tai Matkapuhelin." data-val-oneoftwo-otherproperty="Mobile" data-val-oneoftwo-phoneormobilenotrequered="False" data-val-phone="Virheellinen puhelinnumero. Käytä vain numeroita." data-val-regex="Virheellinen puhelinnumero. Käytä vain numeroita." data-val-regex-pattern="^[+]?([0-9\s]+)" id="Phone" name="Phone" placeholder="Puhelin" type="tel" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Phone class="field-validation-valid help-block" data-valmsg-for="Phone" data-valmsg-replace="true" v-pre=""></Phone>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Matkapuhelin</label>
+            <input :value="private.mobile" @input="private.mobile = $event.target.value" class="form-control" data-val="true" data-val-length="Matkapuhelin pitää olla vähintään 8 ja maks. 16 merkkiä pitkä." data-val-length-max="16" data-val-length-min="8" data-val-oneoftwo="Sinun täytyy täyttää Matkapuhelin tai Puhelin." data-val-oneoftwo-otherproperty="Phone" data-val-oneoftwo-phoneormobilenotrequered="False" data-val-phone="Virheellinen puhelinnumero. Käytä vain numeroita." data-val-regex="Virheellinen puhelinnumero. Käytä vain numeroita." data-val-regex-pattern="^[+]?([0-9\s]+)" id="Mobile" name="Mobile" placeholder="Matkapuhelin" type="tel" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Mobile class="field-validation-valid help-block" data-valmsg-for="Mobile" data-valmsg-replace="true" v-pre=""></Mobile>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">S&#228;hk&#246;posti</label>
+            <input :value="private.email" @input="private.email = $event.target.value" autocomplete="email" class="form-control" data-val="true" data-val-email="Sähköpostiosoite ei kelpaa" data-val-required="Sähköposti pitää täyttää" id="AnonymousUser_Email" name="AnonymousUser.Email" placeholder="Sähköposti" type="email" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Email class="field-validation-valid help-block" data-valmsg-for="AnonymousUser.Email" data-valmsg-replace="true" v-pre=""></Email>
+        </div>
+    </div>
+
+
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Vahvista s&#228;hk&#246;posti</label>
+            <input :value="private.confirmEmail" @input="private.confirmEmail = $event.target.value" class="form-control" data-val="true" data-val-email="Sähköpostiosoite ei kelpaa" data-val-equalto="Sähköpostiosoitteesi ja vahvistettu sähköpostiosoittesi eivät täsmää." data-val-equalto-other="*.Email" data-val-required="Vahvista sähköposti pitää täyttää" id="AnonymousUser_ConfirmEmail" name="AnonymousUser.ConfirmEmail" placeholder="Vahvista sähköposti" type="email" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <ConfirmEmail class="field-validation-valid help-block" data-valmsg-for="AnonymousUser.ConfirmEmail" data-valmsg-replace="true" v-pre=""></ConfirmEmail>
+        </div>
+    </div>
+            <div class="py-2 mb-2">
+                <input type="submit" class="w-100 btn site-btn-tall site-btn-green" value="Seuraava" />
+            </div>
+    </div>
+</form>
+    </div>
+    <div v-show="!isPrivateCustomerType">
+        <form action="/Basket/CheckOut/RegisterCompany" class="form-horizontal input__new" id="companyForm" method="post" role="form"><input name="__RequestVerificationToken" type="hidden" value="og6O0iuPG9IK3QJqSZE3CUQfcyxescnJeO0L9asFYSDOonpGnyGrEoji0X3hsATbAzmplK1orRUSUiMzY4Wlfo9WQJM4Z6A2sRfuiXEQQYA1" />    <div>
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Yrityksen nimi</label>
+            <input :value="company.name" @input="company.name = $event.target.value" autocomplete="name" class="form-control" data-val="true" data-val-iscompany="ALV-tunniste (VAT-numero, esim. FI12345678): pitää täyttää" data-val-iscompany-companytypes="a/s;aps;i/s;amba;kommune;gymnasium;ivs;smba;k/s;pmv" data-val-iscompany-errormessage="ALV-tunniste (VAT-numero, esim. FI12345678): pitää täyttää" data-val-iscompany-otherproperty="Company_VatNumber" data-val-length="Yrityksen nimi pitää olla vähintään 2 ja maks. 35 merkkiä pitkä." data-val-length-max="35" data-val-length-min="2" data-val-required="Yrityksen nimi pitää täyttää" id="Company_Name" name="Company.Name" placeholder="Yrityksen nimi" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Name class="field-validation-valid help-block" data-valmsg-for="Company.Name" data-valmsg-replace="true" v-pre=""></Name>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Yhteyshenkil&#246;</label>
+            <input :value="company.attention" @input="company.attention = $event.target.value" class="form-control" data-val="true" data-val-length="Yhteyshenkilö pitää olla vähintään 0 ja maks. 30 merkkiä pitkä." data-val-length-max="30" id="Company_Attention" name="Company.Attention" placeholder="Yhteyshenkilö" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Attention class="field-validation-valid help-block" data-valmsg-for="Company.Attention" data-valmsg-replace="true" v-pre=""></Attention>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Katuosoite</label>
+            <input :value="company.address1" @input="company.address1 = $event.target.value" autocomplete="street-address" class="form-control" data-val="true" data-val-length="Katuosoite pitää olla vähintään 2 ja maks. 35 merkkiä pitkä." data-val-length-max="35" data-val-length-min="2" data-val-required="Katuosoite pitää täyttää" id="Company_Address1" name="Company.Address1" placeholder="Katuosoite" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Address1 class="field-validation-valid help-block" data-valmsg-for="Company.Address1" data-valmsg-replace="true" v-pre=""></Address1>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Osoiterivi 2</label>
+            <input :value="company.address2" @input="company.address2 = $event.target.value" class="form-control" data-val="true" data-val-length="Osoiterivi 2 pitää olla vähintään 0 ja maks. 35 merkkiä pitkä." data-val-length-max="35" id="Company_Address2" name="Company.Address2" placeholder="Osoiterivi 2" type="" value="" />
+
+                <span class="pi-xs form-control-feedback"></span>
+            <Address2 class="field-validation-valid help-block" data-valmsg-for="Company.Address2" data-valmsg-replace="true" v-pre=""></Address2>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Postinro</label>
+            <input :value="company.zipCode" @input="company.zipCode = $event.target.value" autocomplete="postal-code" class="form-control" data-val="true" data-val-length="Postinro pitää olla vähintään 3 ja maks. 7 merkkiä pitkä." data-val-length-max="7" data-val-length-min="3" data-val-required="Postinro pitää täyttää" data-val-zipcodevalidation="Postinumeroa ei löydy." data-val-zipcodevalidation-countrycodeproperty="Company_CountryCode" data-val-zipcodevalidation-otherproperty="Company_City" id="Company_ZipCode" name="Company.ZipCode" placeholder="Postinumero" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <ZipCode class="field-validation-valid help-block" data-valmsg-for="Company.ZipCode" data-valmsg-replace="true" v-pre=""></ZipCode>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Paikkakunta</label>
+            <input autocomplete="address-level2" class="form-control" data-val="true" data-val-length="Paikkakunta pitää olla vähintään 2 ja maks. 100 merkkiä pitkä." data-val-length-max="100" data-val-length-min="2" data-val-required="Paikkakunta pitää täyttää" id="Company_City" name="Company.City" placeholder="Paikkakunta" ref="city" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <City class="field-validation-valid help-block" data-valmsg-for="Company.City" data-valmsg-replace="true" v-pre=""></City>
+        </div>
+    </div>
+
+        
+<div class="form-group has-feedback position-relative">
+    <div class="col-md-12">
+        <label class="input__label" for="form-control">Maa</label>
+
+        <select :value="company.countryCode" @input="company.countryCode = $event.target.value" class="form-control" data-val="true" data-val-required="Maa pitää täyttää" id="Company_CountryCode" name="Company.CountryCode"><option selected="selected" value="FI">Suomi</option>
+</select>
+
+<CountryCode class="field-validation-valid help-block" data-valmsg-for="Company.CountryCode" data-valmsg-replace="true" v-pre=""></CountryCode>    </div>
+</div>
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Puhelin</label>
+            <input :value="company.phone" @input="company.phone = $event.target.value" autocomplete="tel" class="form-control" data-val="true" data-val-length="Puhelin pitää olla vähintään 8 ja maks. 16 merkkiä pitkä." data-val-length-max="16" data-val-length-min="8" data-val-oneoftwo="Sinun täytyy täyttää Puhelin tai Matkapuhelin." data-val-oneoftwo-otherproperty="Company_Mobile" data-val-oneoftwo-phoneormobilenotrequered="False" data-val-phone="Virheellinen puhelinnumero. Käytä vain numeroita." data-val-regex="Virheellinen puhelinnumero. Käytä vain numeroita." data-val-regex-pattern="^[+]?([0-9\s]+)" id="Company_Phone" name="Company.Phone" placeholder="Puhelin" type="tel" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Phone class="field-validation-valid help-block" data-valmsg-for="Company.Phone" data-valmsg-replace="true" v-pre=""></Phone>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Matkapuhelin</label>
+            <input :value="company.mobile" @input="company.mobile = $event.target.value" class="form-control" data-val="true" data-val-length="Matkapuhelin pitää olla vähintään 8 ja maks. 16 merkkiä pitkä." data-val-length-max="16" data-val-length-min="8" data-val-oneoftwo="Sinun täytyy täyttää Matkapuhelin tai Puhelin." data-val-oneoftwo-otherproperty="Company_Phone" data-val-oneoftwo-phoneormobilenotrequered="False" data-val-phone="Virheellinen puhelinnumero. Käytä vain numeroita." data-val-regex="Virheellinen puhelinnumero. Käytä vain numeroita." data-val-regex-pattern="^[+]?([0-9\s]+)" id="Company_Mobile" name="Company.Mobile" placeholder="Matkapuhelin" type="tel" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Mobile class="field-validation-valid help-block" data-valmsg-for="Company.Mobile" data-valmsg-replace="true" v-pre=""></Mobile>
+        </div>
+    </div>
+
+        
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">ALV-tunniste (VAT-numero, esim. FI12345678):</label>
+            <input :value="company.vatNumber" @input="company.vatNumber = $event.target.value" class="form-control" data-val="true" data-val-required="ALV-tunniste (VAT-numero, esim. FI12345678): pitää täyttää" data-val-vatnumbervalidation="Y-tunnus ei kelpaa" data-val-vatnumbervalidation-countrycodeproperty="Company_CountryCode" data-val-vatnumbervalidation-vatregex="^(FI)?[0-9]{7}(-)?[0-9]$" id="Company_VatNumber" name="Company.VatNumber" placeholder="ALV-tunniste (VAT-numero, esim. FI12345678):" type="" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <VatNumber class="field-validation-valid help-block" data-valmsg-for="Company.VatNumber" data-valmsg-replace="true" v-pre=""></VatNumber>
+        </div>
+    </div>
+
+        
+
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">S&#228;hk&#246;posti</label>
+            <input :value="company.email" @input="company.email = $event.target.value" autocomplete="email" class="form-control" data-val="true" data-val-email="Sähköpostiosoite ei kelpaa" data-val-required="Sähköposti pitää täyttää" id="Company_AnonymousUser_Email" name="Company.AnonymousUser.Email" placeholder="Sähköposti" type="email" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <Email class="field-validation-valid help-block" data-valmsg-for="Company.AnonymousUser.Email" data-valmsg-replace="true" v-pre=""></Email>
+        </div>
+    </div>
+
+
+
+    <div class="form-group has-feedback position-relative">
+        <div class="col-md-12">
+            <label class="input__label" for="form-control">Vahvista s&#228;hk&#246;posti</label>
+            <input :value="company.confirmEmail" @input="company.confirmEmail = $event.target.value" class="form-control" data-val="true" data-val-email="Sähköpostiosoite ei kelpaa" data-val-equalto="Sähköpostiosoitteesi ja vahvistettu sähköpostiosoittesi eivät täsmää." data-val-equalto-other="*.Email" data-val-required="Vahvista sähköposti pitää täyttää" id="Company_AnonymousUser_ConfirmEmail" name="Company.AnonymousUser.ConfirmEmail" placeholder="Vahvista sähköposti" type="email" value="" />
+
+                <span class="pi-xs pi pi-error form-control-feedback" title="Required"></span>
+            <ConfirmEmail class="field-validation-valid help-block" data-valmsg-for="Company.AnonymousUser.ConfirmEmail" data-valmsg-replace="true" v-pre=""></ConfirmEmail>
+        </div>
+    </div>
+
+        <div>
+            <h2 class="h1 h1--responsive">Yhteisön sisäinen toimitus</h2>
+            <div style="color: #767676;">
+                <p>Muuttuneiden EU-säännösten vuoksi meillä on 1.7.2021 lähtien vain tanskalainen ALV-tunniste (EU 2021 One Stop Shop (OSS)).</p><p><strong>Sinun on siksi päätettävä, käsitelläänkö tilauksesi yhteisön sisäisenä toimituksena vai ei.</strong></p>
+                <a rel="noreferrer" href="#" data-toggle="modal" data-target="#IntraComDelModal">Lue lisää</a>
+            </div>
+            <div class="mt-2 has-feedback">
+                <div class="mb-1">
+                    <label class="d-flex align-items-center">
+                        
+<input :value="1" class=" form-control IntraComRadio" data-val="true" data-val-number="The field IntraCommunityDelivery must be a number." data-val-range="Yhteisön sisäinen toimitus -valinta täytyy tehdä" data-val-range-max="2" data-val-range-min="1" data-val-required="The IntraCommunityDelivery field is required." id="Company_IntraCommunityDelivery" name="Company.IntraCommunityDelivery" placeholder="" type="radio" v-model.number="company.intraCommunityDelivery" value="1" />
+                        <span class="pl-2">
+                            Nettolasku (ALV 0%)<br />
+                            <span class="small text-muted fw-500">Olet vastuussa arvonlisäveron ilmoittamisesta ja maksamisesta toimitusmaassa.</span>
+                        </span>
+                    </label>
+                </div>
+                <div>
+                    <label class="d-flex align-items-center">
+                        
+<input :value="2" class=" form-control IntraComRadio" id="Company_IntraCommunityDelivery" name="Company.IntraCommunityDelivery" placeholder="" type="radio" v-model.number="company.intraCommunityDelivery" value="1" />
+                        <span class="pl-2">
+                            ALV-lasku (ALV 25,5%)<br/>
+                            <span class="small text-muted fw-500">Varmistamme, että ALV maksetaan Suomeen tanskalaisen ALV-tunnuksemme (OSS) kautta.</span>
+                        </span>
+                    </label>
+                </div>
+                <span class="field-validation-valid help-block" data-valmsg-for="Company.IntraCommunityDelivery" data-valmsg-replace="true"></span>
+            </div>     
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="IntraComDelModal" tabindex="-1" role="dialog" aria-labelledby="intraComDelModal">
+            <div class="modal-dialog position-relative" role="document">
+                <div class="modal-content position-relative" style="background-color: #e6f3e2; color: #217544;">
+                    <div class="modal-body position-relative">
+                        <div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="p-2">
+                             <h2>Mitä tarkoittaa Intra Community Delivery? </h2><p>                                     Tietyin edellytyksin ovat toimitukset yhdestä EU-maasta toiseen arvonlisäverottomia. Tavallisesti ALV-rekisteröidyn yrityksen, joka ostaa tuotteen toisesta EU-maasta, on saatava nettolasku, jos  </p><ul><li>Tavara kuljetetaan jäsenvaltiosta toiseen</li><li>Tavara on hankittu maassa sijaitsevan yrityksen käyttöön</li><li>Tavara on elinkeinoverotuksen alainen siinä maassa, johon se lähetetään.</li></ul><p>                                     Jos valitset yhteisön sisäisen toimituksen, olet vastuussa arvonlisäveron ilmoittamisesta ja maksamisesta toimitusmaassa.</p><p>Yhteisön sisäiseen toimitukseen ALV-tunnisteen voimassaolo tarkistetaan ALV-tietojen vaihtojärjestelmässä (VIES): <a href="https://ec.europa.eu/taxation_customs/vies/?locale=fi" target="_blank">VAT-numeron (ALV-tunnisteen) tarkistus</a></p><p>Jos VAT-numero on voimassa ja osoitetiedot vastaavat yrityksen virallisia osoitetietoja, voi tilauksen käsitellä yhteisön sisäisenä toimituksena, jos olet valinnut sen vaihtoehdon.</p><p><a href="https://ec.europa.eu/taxation_customs/where-tax_en" target="_blank">Esimerkkejä Euroopan Komission verkkosivuilta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-right py-2 mb-2">
+            <input type="submit" class="w-100 btn site-btn-tall site-btn-green" value="Seuraava" />
+        </div>
+    </div>
+</form>
+    </div>
+</section>
+</section>
+                            <div class="row">
+    <div class="col-md-12 text-center">
+        Klikkaa <a href="#" data-toggle="modal" data-target="#GeoInfo"><b>tästä</b></a>, jos <u> laskutusosoitteesi </u>sijaitsee eri maassa kuin <u>toimitusosoitteesi</u>, kuitenkin vain EU-maat, Norja, Liechtenstein ja Sveitsi.
+        
+        <!-- Modal -->
+        <div class="modal fade" id="GeoInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog text-left position-relative" role="document">
+                <div class="modal-content position-relative">
+                    <div class="modal-header">
+                        <button type="button" class="login-modal--close d-flex align-items-center justify-content-end position-absolute" data-dismiss="modal" aria-label="Close"><i aria-hidden="true" class="pi pi-close"></i></button>
+                        <h2 class="modal-title" id="myModalLabel"></h2>
+                    </div>
+                    <div class="modal-body position-relative">
+                        Tällä hetkellä ei ole mahdollista syöttää laskutusosoitetta, joka sijaitsee eri maassa kuin toimitusosoitteesi on. Siksi sinun täytyy ottaa yhteyttä meihin <a href="/Kundeservice.htm"><b>täältä</b></a>. Lähetä meille sähköpostissa laskutusosoitteesi. Voimme tällöin muuttaa laskutusosoitteesi järjestelmäämme. Voimme kuitenkin tarjota toimituksen vain Suomeen.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6 clearfix existingCustomer">
+                        <div class="checkOutStepHeader d-flex">
+                            <span class="checkOutStep d-flex">
+                                <i class="pi-sm pi pi-login m-auto d-block position-relative"></i>
+                            </span>
+                            <h2 class="d-flex align-self-center">Do you have an account?</h2>
+                        </div>
+                        <div class="px-2 mt-2">                            
+                            <a class="btn site-btn-tall site-btn-green" href="/login?returnUrl=%2FBasket%2FCheckOut">Kirjaudu</a>
+                        </div>
+                    </div>
+                </div>
+
+            
+            <div class="upcomingSteps border-top col-sm-12">
+    <div class="text-muted checkOutStepHeader d-flex">
+        <span class="checkOutStep d-flex">2</span><h2 class="d-flex align-self-center">Hyväksy sopimusehdot ja tietosuojapolitiikka</h2>
+    </div>
+</div>
+            
+            <div class="upcomingSteps border-top col-sm-12">
+    <div class="text-muted checkOutStepHeader d-flex">
+        <span class="checkOutStep d-flex">3</span><h2 class="d-flex align-self-center">Valitse toimitustapa</h2>
+    </div>
+</div>
+            
+            <div class="upcomingSteps border-top col-sm-12">
+    <div class="text-muted checkOutStepHeader d-flex">
+        <span class="checkOutStep d-flex">4</span><h2 class="d-flex align-self-center">Valitse maksutapa</h2>
+    </div>
+</div>
+        </div>
+        <div class="col-sm-4 hidden-xs hidden-sm">
+    <div class="px-2 site-checkout-checkout">
+        <div id="minicheckoutbasketcontent" class="w-100 p-0">
+            <div class="panel panel-primary m-0 clearfix">
+                <div>
+                    <h3>
+Oma ostoskori                    </h3>
+                </div>
+                <div class="site-basket-checkOut">
+                        <div class="miniBasketLine">
+                            <div class="lineProductName"><span>1</span> x Logitech G240-kangas pelihiiri-alusta</div>
+                            <div class="clearfix d-flex">
+                                <div class="text-right minibasketLinePriceWithVat"><span class="text-right">13,46 €</span></div>
+                            </div>
+                        </div>
+                        <div class="miniBasketLine">
+                            <div class="lineProductName"><span>1</span> x Logitech G PRO X SUPERLIGHT + G240 bundle rebate</div>
+                            <div class="clearfix d-flex">
+                                <div class="text-right minibasketLinePriceWithVat"><span class="text-right">-13,46 €</span></div>
+                            </div>
+                        </div>
+                        <div class="miniBasketLine">
+                            <div class="lineProductName"><span>1</span> x Logitech G740 Cloth Pelihiiri Pad</div>
+                            <div class="clearfix d-flex">
+                                <div class="text-right minibasketLinePriceWithVat"><span class="text-right">29,71 €</span></div>
+                            </div>
+                        </div>
+                        <div class="miniBasketLine">
+                            <div class="lineProductName"><span>1</span> x Logitech G PRO X SUPERLIGHT - Pelihiiri - Optinen - 5 painiketta - Valkoinen</div>
+                            <div class="clearfix d-flex">
+                                <div class="text-right minibasketLinePriceWithVat"><span class="text-right">79,90 €</span></div>
+                            </div>
+                        </div>
+                </div>
+                <div class="miniBasketTotals">
+                    <div class="clearfix d-flex">
+                        <div class="text-left flex-grow-1">Toimitus</div>
+                        <div class="text-right flex-grow-1"><span class="text-right">0,00 €</span></div>
+                    </div>
+                    <div class="clearfix d-flex">
+                        <div class="text-left total fw700 flex-grow-1">Kokonaissumma</div>
+                        <div class="totalPrice text-right fw700 flex-grow-1"><span class="text-right">109,61 €</span></div>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                        <div><a href="/Basket" target="_self" class="btn site-btn-tall site-btn-grey">Muuta tilausta</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div></div><script type="module">
+    Consent.activateFor('functional', function () {
+            (function (s, o, l, v, e, m, a, t) {
+        t = 'solvemateConfig'; s[e] = s[e] || function (x, y) { (s[t] = s[t] || {})[x] = y; }; a = o.createElement(l); a.async = 1; a.src = v; o.body.appendChild(a);
+    })(window, document, 'script', 'https://widget.solvemate.com/v2/init.js', 'solvemate');
+    solvemate('projectID', '61419788b178b476636a69ec');
+    if (document.getElementById("chatbot") != null) {
+        solvemate('hideBeacon', true);
+        solvemate('inlineContainerId', 'chatbot');
+        solvemate('hideGreeting', true);
+    }
+    });
+</script></div>
+    <footer id="footer" class="footer position-relative" role="contentinfo"><div class="site-footer-bar"></div>
+<div class="footer__top py-4">
+    <div class="ps-container">
+        <div class="site-footer-newsletterContainer">
+<div class="f-white">
+    Tilaamalla uutiskirjeen saat tietoa uusimmista tarjouksistamme ja kilpailuista. <!--Katso uusin uutiskirje <a href="//www.anpdm.com//public/newsletter-preview.aspx?mLstID=44465C46714544504B764743&AccountId=454558437943405B4B71" target="_blank">täältä.</a>-->
+</div>
+<div class="p-2">
+<form action="/CustomerCenter/Newsletter/Subscribe" class="input-newsletter position-relative w-100" method="get"><input name="__RequestVerificationToken" type="hidden" value="Qq7C4aaAB9FQT2cUI7T9WJTlJXyYXdGQqQ48QXm7XsfrpuWMlb_U-qcFl1sVSyFrRUN_jAANw9DttijXo1sZV29CA5vCmYlwK4L1zRgKWho1" />        <input name="Email" class="input__round-lg w-100 pr-5" type="email" placeholder="kirjoita sähköpostiosoitteesi">
+<input id="source" name="source" type="hidden" value="WebsiteForm" />        <button type="submit" aria-label="Newsletter Subscribe" class="input__round-btn position-absolute d-flex justify-content-center align-items-center">
+            <i class="pi-sm pi pi-send-mail rotate45"></i>
+        </button>
+</form></div>
+                <div class="socialLinksContainer">
+                    <span class="f-white pb-1">Löydä meidät:</span>
+                    <div class="socialLinks">
+                            <a class="px-half" rel="noreferrer" href="https://www.facebook.com/proshop.fi/" target="_blank" title="Löydä meidät: Facebook"><img class="lazy soci-icon" width="40" height="40" data-src="/Content/images/SVG/facebook.svg" src="" alt="Facebook" /></a>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<div class="pl-2 pr-2 ps-container">
+    <div class="ps-container__inner ps__template--footer">
+        <div class="footer__contact footer__accordion-item active">
+                <div class="display-5 footer__header d-flex"><span class="align-items-center"><i class="pi-sm pi pi-headphones-b mr-1"></i>Asiakaspalvelun aukioloajat</span><button class="d-flex footer__toggle" data-toggle="true" aria-expanded="true" aria-controls="accordion__section-0"><div class="align-items-center text-left d-flex"><i class="pi-sm pi pi-headphones-b mr-1"></i>Asiakaspalvelun aukioloajat</div> <i class="ki pi-xs pi-chevron-down"></i></button></div>
+                <div id="accordion__section-0" class="footer__accordion-list">
+                    <table width="100%">
+<tbody>
+<tr>
+<td>Maanantai - Perjantai</td>
+<td>10.00 - 16.00</td>
+</tr>
+<tr>
+<td>Lauantai, sunnuntai &amp; Tanskan pyhäpäivät:</td>
+<td>Suljettu</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td><a href="/Asiakaspalvelu-FAQ.htm">Ota meihin yhteyttä</a></td>
+<td>  </td>
+</tr>
+</tbody>
+</table>
+                </div>
+        </div>
+        <div class="footer__support footer__accordion-item">
+            <div class="display-5 footer__header d-flex">
+                <span>Tuki</span>
+                <button class="d-flex footer__toggle" data-toggle="true" aria-expanded="false" aria-controls="accordion__section-1">
+                    Tuki
+                    <i class="ki-s pi-chev-right svg-fill-red"></i>
+                </button>
+            </div>
+            <div id="accordion__section-1" class="footer__accordion-list">
+                <ul class="list-unstyled arrow__list">
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/Oppaat.htm"> Oppaat</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/Kuljetus-Toimitus.htm"> Kuljetus &amp; Toimitus</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/Reklamaatiot-Takuu.htm"> Reklamaatiot / Takuu</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/Asiakaspalvelu-FAQ.htm"> Asiakaspalvelu / FAQ</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/Sopimusehdot.htm"> Sopimusehdot</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/Tietosuojaseloste.htm"> Tietosuojaseloste</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/Black-Friday"> Black Friday 2025</a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__myProshop footer__accordion-item">
+            <div class="display-5 footer__header d-flex">
+                <span>Omat sivut</span>
+                <button class="d-flex footer__toggle" data-toggle="true" aria-expanded="false" aria-controls="accordion__section-2">
+                    Omat sivut
+                    <i class="ki-s pi-chev-right svg-fill-red"></i>
+                </button>
+            </div>
+            <div id="accordion__section-2" class="footer__accordion-list">
+                <ul class="list-unstyled arrow__list">
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/CustomerCenter"> Oma Proshop</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/CustomerCenter/Rma/Login"> Luo reklamaatiotapaus</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/CustomerCenter/CustomerReturn/StartReturnCase"> Luo palautustapaus</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/CustomerCenter/Account"> Tilaushistoria</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="https://auth.proshop.fi/Identity/Account/ForgotPassword"> Unohtunut salasana</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="ki-s pi-chev-right bg-black"></i>
+                            <a href="/Kuljetusvahinko.htm"> Kuljetusvahinko</a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__address">
+                <div class="footer__accordion-item">
+                    <div class="display-5 footer__header d-flex">
+                        <span>Yhteystiedot</span>
+                        <button class="d-flex footer__toggle" data-toggle="true" aria-expanded="false" aria-controls="accordion__section-3">
+                            Yhteystiedot
+                            <i class="ki-s pi-chev-right svg-fill-red"></i>
+                        </button>
+                    </div>
+                    <div id="accordion__section-3" class="footer__accordion-list">
+                        Proshop a/s<br />Slet Møllevej 17<br />DK-8270 Højbjerg<br />Denmark<br />VAT-numero: DK18966239 EU 2021 One Stop Shop (OSS)<br /><br />
+
+                        <ul class="list-unstyled arrow__list">
+                                <li class="d-flex align-items-center">
+                                    <i class="ki-s pi-chev-right bg-black"></i>
+                                    <a href="/Tietoa-yrityksestae.htm"> Tietoa yrityksest&#228;</a>
+                                </li>
+                        </ul>
+                        <div class="pt-2 clearfix">
+                            
+       <div class="menu-button-links pull-left btn-group position-relative">
+        <a id="dropdown-lang" href="#" aria-controls="languageMenu" class="familyRelationsDropdownBtn dropdown btn site-btn-between site-btn-white site-btn-hasborder dropdown-toggle langDropDownBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="ki-m pi pi-globe mr-1"></i>
+            <p>Maat</p>
+            <i class="ki-s pi-chev-right bg-black rotate90 ml-1"></i>
+        </a>
+        <ul id="languageMenu" role="menu" aria-labelledby="dropdown-lang" class="dropdown__list dropdown-menu familyRelationsDropdown langDropDown">
+                <li role="none">
+                    <a href="//www.proshop.at">
+                        proshop.at
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="//www.proshop.de">
+                        proshop.de
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="//www.proshop.dk">
+                        proshop.dk
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="//www.proshop.nl">
+                        proshop.nl
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="//www.proshop.pl">
+                        proshop.pl
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="//www.proshop.se">
+                        proshop.se
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="//www.proshop.no">
+                        proshop.no
+                    </a>
+                </li>
+        </ul>
+    </div>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+    <div class="pl-2 pr-2 ps-container"><div class="d-flex footer-row__flex pb-4 pt-2 footer__border justify-content-center">     <div class="site-campaignElement" data-campaign-element-id="787b6631-3255-453b-82a1-8aaa85e8022d">
+        <ul class="list-inline"><li><a rel="noopener" data-action="campaignClick" data-id="0fe0eaf1-da87-4976-9125-22345044919e" data-name="Proshop.fi defaults" data-creative="787b6631-3255-453b-82a1-8aaa85e8022d" data-position="footer-certification" href="http://suomenvarmakauppa.fi/kauppa/157/Proshop.fi#start" target="_blank" class="proshop-fi-icon-certificate"></a></li></ul><script src="" defer data-consent-src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=XXKGyr" data-category-consent="cookie_cat_marketing"></script><script>var _learnq=_learnq||[];_learnq.push(["track","Visited webpage",{url:window.location.href,name:document.title}])</script>
+    </div>
+ </div></div>
+<div class="footer__bottom">
+    <div class="pl-2 pr-2 ps-container">
+        <div class="d-flex footer-row__flex pt-4 pb-2 justify-content-between align-items-center">
+            <div class="text-center flex-center">
+                        <div class="d-flex mb-2 mx-1">
+                            <img class="lazy" data-src="/content/images/delivery/Postnord.svg" alt="Postnord" />
+                        </div>
+                        <div class="d-flex mb-2 mx-1">
+                            <img class="lazy" data-src="/content/images/delivery/posti-fi.svg" alt="Posti" />
+                        </div>
+            </div>
+            <div class="text-center flex-center flex-wrap">
+                        <div class="d-flex footer__payment mb-2">
+                            <img class="lazy" data-src="/content/images/cards-svg/Visa.svg" alt="Visa" />
+                        </div>
+                        <div class="d-flex footer__payment mb-2">
+                            <img class="lazy" data-src="/content/images/cards-svg/MasterCard.svg" alt="Mastercard" />
+                        </div>
+                        <div class="d-flex footer__payment mb-2">
+                            <img class="lazy" data-src="/content/images/cards-svg/apple-pay.svg" alt="Apple Pay" />
+                        </div>
+                        <div class="d-flex footer__payment mb-2">
+                            <img class="lazy" data-src="/content/images/cards-svg/google-pay.svg" alt="Google Pay" />
+                        </div>
+                        <div class="d-flex footer__payment mb-2">
+                            <img class="lazy" data-src="/content/images/cards-svg/MobilePay.svg" alt="MobilePay" />
+                        </div>
+                        <div class="d-flex footer__payment mb-2">
+                            <img class="lazy" data-src="/content/images/cards-svg/PayPal.svg" alt="PayPal" />
+                        </div>
+                        <div class="d-flex footer__payment mb-2">
+                            <img class="lazy" data-src="/content/images/cards-svg/Klarna.svg" alt="Klarna" />
+                        </div>
+                        <div class="d-flex footer__payment mb-2">
+                            <img class="lazy" data-src="/content/images/cards-svg/PayTrail.svg" alt="PayTrail" />
+                        </div>
+            </div>
+        </div>
+    </div>
+    <div id="auctionsMenu" class="d-flex pl-2 pr-2 ps-container"></div> 
+</div>
+<script type="text/javascript">
+    let footerToggle = document.querySelectorAll("[data-toggle='true']");
+    for (var i = 0; i < footerToggle.length; i++) {
+        footerToggle[i].addEventListener('click', function (e) {
+            e.currentTarget.closest('.footer__accordion-item').classList.toggle('active');
+            this.toggleAttribute('aria-expanded="true"');
+        });
+    }
+</script><input id="cookieTextFirstPart" type="hidden" value="Proshop a/s k&#228;ytt&#228;&#228; ev&#228;steit&#228; sivustoillaan parantaakseen k&#228;ytt&#228;j&#228;kokemusta sek&#228; kohdentaakseen sis&#228;lt&#246;&#228; ja mainoksia. N&#228;m&#228; tiedot jaetaan kolmannen osapuolen kanssa, kuten esimerkiksi Google ja Facebook ja ev&#228;steit&#228; k&#228;ytet&#228;&#228;n anonyymiin seurantaan verkkosivujen v&#228;lill&#228;."/>
+<input id="cookieTextLastPart" type="hidden" value="K&#228;ytt&#228;m&#228;ll&#228; verkkosivujamme, hyv&#228;ksyt tietosuojapolitiikkamme ja ev&#228;stek&#228;yt&#228;nt&#246;mme." />
+<input id="cookieLinkText" type="hidden" value="Voit lukea lis&#228;&#228; t&#228;&#228;lt&#228;" />
+<input id="cookieLink" type="hidden" value="https://www.proshop.fi/Tietosuojaseloste.htm" />
+<input id="cookieAcceptButtonText" type="hidden" value="OK" /></footer>
+    <div id="fixedBottomMessage"></div>
+    
+    <script type="text/javascript" src="/Content/v-684770519/checkout.bundle.js"></script>
+    
+    
+    <script type="text/javascript" language="javascript">
+        var rsa;var raptorLoaded = function (raptor) { rsa = raptor; raptor.initialize({ customerID: "5878", productIdParamIndex: 2, eventTypeParamIndex: 1, useCookies: Consent.isValid('marketing') });
+            var raptorUserId = '';var userId = $('#minibasket').data('customerid');
+            console.log("Raptor **************: " + userId);if (raptorUserId.length > 0) userId = raptorUserId;else if (userId === '0') userId = ''; raptor.trackEvent("visit", "", "", "", "", "", userId, "", "", "", "", "");
+        };
+    </script>
+
+</body>
+ 
+ 
+<script type="text/javascript">
+var Consent = { cookieWarning: false, validCategories: ["functional", "statistic", "marketing"] };window.dataLayer = window.dataLayer || [];function gtag() { dataLayer.push(arguments); }gtag('consent', 'default', {'ad_storage': 'denied','ad_user_data': 'denied','ad_personalization': 'denied','analytics_storage': 'denied','wait_for_update': 2000 });if (navigator.userAgent.includes("CookieInformationScanner")) { initCookieInf(); }else if (document.cookie.indexOf('CookieInformationConsent=') < 0) { window.addEventListener('mousemove', initCookieInf);window.addEventListener('scroll', initCookieInf);window.addEventListener('keydown', initCookieInf);} else { initCookieInf();} function initCookieInf() { window.removeEventListener('mousemove', initCookieInf);window.removeEventListener('scroll', initCookieInf);window.removeEventListener('keydown', initCookieInf);var sc = document.createElement('script');sc.type = 'text/javascript';sc.id = 'CookieConsent';sc.src = 'https://policy.app.cookieinformation.com/uc.js';sc.dataset.culture = 'FI';sc.dataset.gcmVersion = '2.0';document.head.appendChild(sc);} Consent.cookieWarning = true;Consent.isValid = function (category) { try { return category == null || category.length == 0 || CookieInformation.getConsentGivenFor('cookie_cat_' + category); } catch { return false; } };Consent.run = function (category, callback) { if (Consent.isValid(category)) { callback(); } };Consent.activateFor = function (category, callback) { if (Consent.isValid(category)) { callback(); } else { window.addEventListener('CookieInformationConsentGiven', function () { Consent.run(category, callback) }); } };
+</script>
+ </html>
